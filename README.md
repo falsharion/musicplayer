@@ -2,7 +2,7 @@
 
 This is a simple music player built with HTML, CSS, and JavaScript that allows users to play and control their favorite songs.
 
-![Music Player](/images/prototype.jpg)
+![Music Player](/images/prototype.png)
 
 ## Features
 

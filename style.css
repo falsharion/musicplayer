@@ -2,99 +2,205 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
-    --primary-color: #FFB5BF;
-    --secondary-color: #AB7D71;
-    --tertiary-color: #949494;
+    --primary-color: #27AE60;
+    --secondary-color: #b5efce;
+    --tertiary-color: #828282;
+    --bg-color: #FAFAFA;
 }
 
 
-body{
-    font-family: 'Nunito Sans', sans-serif;
+.container{
+    display: flex;
+    align-items: start;
+    justify-content: start;
     height: 100vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
-    background-color: #F0F0F0;
+    column-gap: 1%;
+}
+
+i{
+    color: var(--primary-color);
 }
 
 p{
     color: var(--tertiary-color);
 }
-
-h2,
-.material-icons {
-    font-size: 2rem;
-    color: var(--secondary-color);
-}
-
-button{
-    cursor: pointer;
-    border: none;
-}
-
-/* homepage */
-.header,
-.footer{
+.sidebar{
+    width: 5%;
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    background-color: var(--bg-color);
+    height: inherit;
+    padding: 20px 5px;
 }
 
-.music-info{
+.sidebar-top, .sidebar-bottom{
     display: flex;
-    width: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 30px;
 }
 
-.music-info img{
-    height: 350px;
-    width: 350px;
-    margin-bottom: 10px;
+.sidebar-top i,
+.sidebar-bottom i{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.dash,
+.sidebar-bottom i,
+.top-chart i{
+    color: var(--tertiary-color);
+}
+
+.music{
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.avatar{
+    height: 32px;
+    width: 32px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     border-radius: 50%;
-    border: 5px solid var(--primary-color);
-
 }
 
-.music-progress{
+.new-music{
+    width: 25%;
     display: flex;
-    width: 80%;
+    flex-direction: column;
+    padding: 15px;
+    align-items: left;
+    justify-content: space-evenly;
+}
+
+
+.top-chart,
+.top-chart div{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 30px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.grid-container img{
+    height: 150px;
+    width: 150px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.grid-container p,
+.suggestions-text p{
+    font-size: 14px;
+}
+
+.suggestions{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.suggestions img{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.suggestions-text{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nowplaying{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    height: inherit;
+    background-color: var(--bg-color);
+    padding: 20px;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+.nowplaying img{
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+.playing,
+.airpods{
+    display: flex;
+    align-items: start;justify-content: center;
+    text-align: center;
+    width: 55%;
+   
+}
+
+.playing div{
+    flex: 1;
+}
+
+.duration,
+.volume,
+.progress{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
     
+}
+
+.volume{
+    width: 70%;
 }
 
 .progress-bar{
     flex: 1;
-    margin: 0 10px;
     accent-color: var(--primary-color);
     height: 5px;
     border: none;
 }
 
-.navigation {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-bottom: 30px;
-  }
-  
-.pause-button{
-    border: 1px #ccc solid;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+
+.play{
+    font-size: 4rem;
 }
 
-.favorite{
-    color: var(--primary-color);
+.tracklist{
+    width: 25%;
+    padding: 20px;
+}
+
+.airpods{
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    padding: 3px;
 }

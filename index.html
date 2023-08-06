@@ -4,41 +4,147 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
         <title>Music Player</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="header">
-            <p></p>
-            <i class="material-icons">expand_more</i>
-            <i class="material-icons">more_horiz</i>
-        </div>
-
-        <div class="music-info">
-            <img src="images/albumcover.png" alt="Album Cover">
-            <h2>Music Title</h2>
-            <p>Artiste Name</p>
-        </div>
-
-        <div class="music-progress">
-            <p>00:00</p>
-            <input type="range" class="progress-bar" value="0">
-            <p>04:50</p>
+        <div class="container">
+            <div class="sidebar">
+                <div class="sidebar-top">
+                    <img src="./images/logo.png" alt="Logo">
+                    <img class="avatar" src="./images/avatar.jpg" alt="Profile Pic">
+                   
+                    <i class="material-icons dash">minimize</i>
+                    <i class="material-icons">favorite</i>
+                    <i class="material-icons music">headphones</i>
+                    <i class="material-icons">summarize</i>
+                </div>
+                <div class="sidebar-bottom">
+                    <i class="material-icons">settings</i>
+                    <i class="material-icons">logout</i>
+                </div>
+            </div>
             
+            <div class="new-music">
+                <div>
+                    <h1>Discover New Music</h1>
+                </div>
+
+                <div class="top-chart">
+                    <h3>Top-chart</h3>
+                    <div>
+                        <p>More</p>
+                        <i class="material-icons">expand_more</i>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div>
+                        <img src="images/albumcover.png" alt="top Chart Cover">
+                        <h4>Whispers of the Night</h4>
+                        <p>Emily Chima, 2018</p>
+                    </div>
+                    <div>
+                        <img src="images/albumcover.png" alt="top Chart Cover">
+                        <h4>Dancing in the Rain</h4>
+                        <p>Cosmas Daniella, 2019</p>
+                    </div>
+                    <div>
+                        <img src="images/albumcover.png" alt="top Chart Cover">
+                        <h4>Euphoric Dreams</h4>
+                        <p>Sharon Falomo, 2021</p>
+                    </div>
+                    <div>
+                        <img src="images/albumcover.png" alt="top Chart Cover">
+                        <h4>Celestial Serenade</h4>
+                        <p>Safe EHA, 2023</p>
+                    </div>
+                    
+                </div>
+                
+                <div>
+                    <h3>You may like</h3>
+                    <div class="suggestions">
+                        <img src="images/albumcover.png" alt="top Chart Cover">
+                        <div class="suggestions-text">
+                            <div>
+                                <h4>Euphoria</h4>
+                                <p>Ben Johnson</p>
+                            </div>
+                            <div>
+                                <h4>12:34</h4>
+                                <p>2001</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="suggestions">
+                        <img src="images/albumcover.png" alt="top Chart Cover">
+                        <div class="suggestions-text">
+                            <div>
+                                <h4>We are the world</h4>
+                                <p>Michael Jackson</p>
+                            </div>
+                            <div>
+                                <h4>22:36</h4>
+                                <p>2010</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="nowplaying">
+                <h3>Now Playing</h3>
+                <img src="images/albumcover.png" alt="top Chart Cover">
+
+                <div class="playing">
+                    <i class="material-icons">add</i>
+                    <div>
+                        <h4>Money Machine</h4>
+                        <p>1000 Geeks</p>
+                    </div>
+                    <i class="material-icons">favorite</i>
+                </div>
+                
+                <div class="duration">
+                    <p>02:24</p>
+                    <p>05:24</p>
+                </div>
+                
+                <div class="progress">
+                    <input type="range" class="progress-bar" value="0">
+                </div>
+                
+                <div class="duration">
+                    <i class="material-icons dash">shuffle</i>
+                    <i class="material-icons">skip_previous</i>
+                    <i class="material-icons play">play_circle</i>
+                    <i class="material-icons">skip_next</i>
+                    <i class="material-icons dash">repeat</i>
+                   
+                </div>
+
+                <div class="volume">
+                    <i class="material-icons dash">volume_down</i>
+                    <input type="range" class="progress-bar" value="0">
+                    <i class="material-icons dash">volume_up</i>
+                   
+                </div>
+
+                <div class="airpods">
+                    <i class="material-icons">headphones</i> 
+                    <p>Airpods Pro (Mercy)</p>
+                </div>
+            </div>
+            <div class="tracklist">Column 4</div>
         </div>
-        <div class="navigation">
-            <button aria-hidden="true"><i class="material-icons">skip_previous</i></button>
-            <button class="pause-button" aria-hidden="true"><i class="material-icons">pause</i></button>
-            <button aria-hidden="true"><i class="material-icons">skip_next</i></button>
-        </div>
-        <div class="footer">
-            <button aria-hidden="true"><i class="material-icons">replay</i></button>
-            <button aria-hidden="true"><i class="material-icons favorite">favorite</i></button>
-           
-        </div>  
        
         <script src="index.js"></script>
     </body>
